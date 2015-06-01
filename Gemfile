@@ -11,9 +11,6 @@ gem 'rails', '4.2.1'
    gem 'rails_12factor'
  end
 
- group :production do
-    gem 'rails_12factor'
- end
  group :development do
    gem 'sqlite3'
  end
