@@ -8,6 +8,15 @@
    )
  end
  posts = Post.all
+
+ # Create Posts
+ 50.times do
+   Post.create!(
+     title:  Faker::Lord.sentence,
+     body:   Faker::Lord.paragraph
+   )
+ end
+ posts = Post.all
  
  # Create Comments
  100.times do
