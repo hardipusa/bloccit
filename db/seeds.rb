@@ -1,4 +1,6 @@
  require 'faker'
+
+ #find_or_create_by
  
  # Create Posts
  50.times do
@@ -7,16 +9,12 @@
      body:   Faker::Lorem.paragraph
    )
  end
+
  posts = Post.all
 
- # Create Posts
- 50.times do
-   Post.create!(
-     title:  Faker::Lord.sentence,
-     body:   Faker::Lord.paragraph
-   )
- end
- posts = Post.all
+ # Create Post
+ #find_or_create_by
+
  
  # Create Comments
  100.times do
@@ -25,6 +23,8 @@
      body: Faker::Lorem.paragraph
    )
  end
+
+ #find_or_create_by
  
  puts "Seed finished"
  puts "#{Post.count} posts created"
