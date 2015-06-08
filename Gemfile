@@ -13,6 +13,7 @@ gem 'rails', '4.2.1'
 
  group :development do
    gem 'sqlite3'
+   gem 'annotate'
  end
 
 # Use SCSS for stylesheets
