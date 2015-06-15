@@ -14,7 +14,10 @@
 
  # Create Post
  #find_or_create_by
-
+ p = Post.find_or_create_by(
+    title: "title", 
+    body:  "body"
+  )
  
  # Create Comments
  100.times do
@@ -24,10 +27,12 @@
    )
  end
 
+ c = Comment.find_or_create_by(
+    body: "text",
+    post: p 
+  )
 
- 5.times do |i|
-  Product.create(name: "Product ##{i}", description: "A product.")
-end
+
 
  #find_or_create_by
  
