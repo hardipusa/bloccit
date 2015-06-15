@@ -30,10 +30,12 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'faker'
 #help generate development data automatically
+gem 'devise'
+#
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'bootstrap-sass'
-#
+#powerful authentication system for users
 gem 'pry-rails'
 #
 gem 'jbuilder', '~> 2.0'
