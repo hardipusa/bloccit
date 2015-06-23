@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+ resources :advertisements, only: [:index,:show]
+
   get 'index/show'
 
   resources :posts

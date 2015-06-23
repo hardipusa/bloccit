@@ -1,6 +1,2 @@
-class Advertisement
-  title:string
-  copy:text
-  price:integer
+class Advertisement < ActiveRecord::Base
 end
-

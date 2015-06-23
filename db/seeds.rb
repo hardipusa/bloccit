@@ -12,8 +12,8 @@
  # Create Posts
  50.times do
    Post.create!(
-     title:  Faker::Lord.sentence,
-     body:   Faker::Lord.paragraph
+     title:  Faker::Lorem.sentence,
+     body:   Faker::Lorem.paragraph
    )
  end
  posts = Post.all
@@ -25,6 +25,15 @@
      body: Faker::Lorem.paragraph
    )
  end
+
+ #Create Advertisements
+ 50.times do
+  Advertisement.create!(
+    title: Faker::Lorem.sentence,
+    copy: Faker::Lorem.paragraph,
+    price: Faker::Commerce.price
+    )
+end
  
  puts "Seed finished"
  puts "#{Post.count} posts created"
