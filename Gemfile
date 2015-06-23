@@ -32,6 +32,8 @@ gem 'faker'
 #help generate development data automatically
 gem 'devise'
 #
+gem 'figaro', '1.0'
+#
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'bootstrap-sass'
