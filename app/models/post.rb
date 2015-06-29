@@ -14,4 +14,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
 
   default_scope { order('created_at DESC') }
+  
+  Post.ordered_by_title.first
+  Post.ordered_by_reverse_created_at.first
 end
