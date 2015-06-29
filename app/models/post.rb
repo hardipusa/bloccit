@@ -15,6 +15,10 @@ class Post < ActiveRecord::Base
 
   default_scope { order('created_at DESC') }
   
-  Post.ordered_by_title.first
-  Post.ordered_by_reverse_created_at.first
+  scope :ordered_by_title, -> {order('title ASC')}
+  scope :ordered_by_reverse_created_at, -> {order('created_at ASC')}
 end
+
+
+
+

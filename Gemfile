@@ -32,6 +32,8 @@ gem 'faker'
 #help generate development data automatically
 gem 'devise'
 #
+gem 'pundit'
+#Easily Authorize different user for diff tasks in app
 gem 'figaro', '1.0'
 #
 gem 'turbolinks'
