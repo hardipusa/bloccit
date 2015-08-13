@@ -13,17 +13,21 @@ class PostsController < ApplicationController
     authorize @post
   end
 
-  def create
-    @post =  @post = current_user.posts.build(params.require(:post).permit(:title, :body))
-    authorize @post
-    if @post.save
-      flash[:notice] = "Post was saved."
-      redirect_to @post
-    else
-      flash[:error] = "There was an error saving the post. Please try again."
-      render :new
-    end
+  def post_params
+    params.require(:post).permit(:title, :content)
   end
+  
+  def create
+    @post = current_user.posts.build(params.require(:post).permit(:title, :body))
+    authorize @post
+  if @post.save
+    flash[:notice] = "Post was saved."
+    redirect_to @post
+  else
+    flash[:error] = "There was an error saving the post. Please try again."
+    render :new
+  end
+ end
 
   def edit
     @post = Post.find(params[:id])
