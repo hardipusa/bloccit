@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  def index
-    @posts = Post.all
-    authorize @posts
-  end
+ def index
+  @posts = policy_scope(Post).order('title').page(params[:page]).per(25)
+  authorize User
+end
 
   def show
     @post = Post.find(params[:id]) 
