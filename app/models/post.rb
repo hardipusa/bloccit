@@ -12,16 +12,11 @@
 class Post < ActiveRecord::Base
   has_many :comments
   belongs_to :user
-  validates :title,
-                presence: true
-  validates :body,
-                presence: true
-  validates :user, 
-                presence: true
+  belongs_to :topic
 
-  def to_s
-    title
-  end
+  validates :title, presence: true
+  validates :body, presence: true
+  validates :user, presence: true
 
   default_scope { order('created_at DESC') }
   
